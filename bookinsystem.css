@@ -231,6 +231,15 @@ p {
   object-fit: contain;
 }
 
+#edit-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #management-project-outcome {
   padding-left: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

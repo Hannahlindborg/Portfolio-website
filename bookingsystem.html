@@ -92,9 +92,9 @@
           <section id="system-architecture">
             <div id="bookingform-text">
               <h2>Client Booking Form</h2>
-              <p>I implemented a multi-step state to ensure guest selections are preserved throughout the session. Each step has real-time front-end validation to ensure only valid information reaches the database.</p>
-              <p>The review step allows guests to double check their information before submission</p>
-              <p>
+              <p>I implemented a multi-step state to ensure guest selections are preserved throughout the session. Each step has real-time front-end validation to ensure only valid information reaches the database.
+              <br><br>The review step allows guests to double check their information before submission
+              <br><br>
                 The booking form maintaings the brand identity for visual continuity in the
                 user experience for guests navigating from the main Sjöstugan
                 website. A progress bar was implements allowing the guests to know the number of steps remaining at all times.
@@ -124,8 +124,7 @@
                   status"</b>. Specific guests are easily found in the list of
                   bookings with filters for booking timeframe and specific cabins. The search function allows for
                   specific guest names to be searched for.
-                </p>
-                <p>The admin pages feature a simplified
+                <br><br>The admin pages feature a simplified
                   version of the brand style as quick information scannability is top priority.</p>
                 <span><b>Features</b></span>
                 <ul id="admin-list">
@@ -189,8 +188,8 @@
             <section id="security">
               <div id="security-text">
               <h2 class="section-title">Security</h2>
-              <p><b>Bcrypt</b> password hashing ensures the admin credentials are never stored in plain text.</p>
-              <p>I implemented server side session management using <b>Expess-sessions</b>. Allowing the admin to stay logged in when making changes.</p>
+              <p><b>Bcrypt</b> password hashing ensures the admin credentials are never stored in plain text.
+              <br><br>I implemented server side session management using <b>Expess-sessions</b>. Allowing the admin to stay logged in when making changes.</p>
               </div>
               <section id="login-img-section">
                 <div class="img-container">
@@ -208,8 +207,8 @@
               </section>
               <div id="restriction-text">
               <h2 class="section-title">Restrictions</h2>
-              <p>Admin pages are restricted from unauthorized users for security purposes.</p>
-              <p>The <b>authorization middleware</b> confirms whether the admin user is logged in before allowing access to admin restricted pages.</p>
+              <p>Admin pages are restricted from unauthorized users for security purposes.
+              <br><br>The <b>authorization middleware</b> confirms whether the admin user is logged in before allowing access to admin restricted pages.</p>
               </div>
               <section id="restriction-images">
                 <div class="img-container">
@@ -223,7 +222,9 @@
                   <p>Unauthorized page</p>
                 </div>
               </section>
+              <section id="edit-text">
               <h2 class="section-title">Editing bookings</h2>
+              </section>
               <section id="edit-images">
                 <div class="img-container">
                   <img src="images/sjöstugan/editing route.png" alt="" />
@@ -242,13 +243,12 @@
             <p>
               The management systems allows the owners to save hours on manual email correspondece. The
               ability to edit bookings eliminates the need to create entirely new bookings for minor guest input errors.
-            </p>
-            <p>
+            <br><br>
               The Realtime connection with the database allows users to see which dates are
               available for booking and eliminates double bookings.
-            </p>
-            <p><b>Future implementations:</b></p>
-            <p>Integrated payment system</p>
+              <br><br>
+            <b>Future implementations:</b>
+          Integrated payment system</p>
           </section>
         </main>
         <footer>

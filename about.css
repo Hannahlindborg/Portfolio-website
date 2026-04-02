@@ -188,7 +188,7 @@ footer a:visited {
     align-items: center;
     padding-block: var(--space-sm);
   }
-  .skill-categories {
+  .skill-category {
     column-gap: var(--space-md);
     visibility: visible;
   }

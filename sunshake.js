@@ -68,10 +68,10 @@ function colorPalette() {
     colorSwatchesLeft,
     {
       autoAlpha: 0,
-      x: -100,
+      y: +100,
     },
     {
-      x: 0,
+      y: 0,
       autoAlpha: 1,
       duration: 1,
       ease: "expo.out",
@@ -86,10 +86,10 @@ function colorPalette() {
     colorSwatchesRight,
     {
       autoAlpha: 0,
-      x: +100,
+      y: +100,
     },
     {
-      x: 0,
+      y: 0,
       autoAlpha: 1,
       duration: 1,
       ease: "expo.out",

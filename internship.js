@@ -32,7 +32,7 @@ function responsibilities() {
 }
 
 function skills() {
-  const sectionContainer = document.querySelector("#internship-skills");
+  const sectionContainer = document.querySelector("#skills");
   gsap.fromTo(
     sectionContainer,
     {
