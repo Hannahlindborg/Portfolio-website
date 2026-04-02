@@ -1,0 +1,237 @@
+/* Swup reveal transition */
+#swup.transition-reveal {
+  background-color: black;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+#workbutton:hover {
+  cursor: pointer;
+}
+
+#hero-section-upper {
+  padding-inline: var(--space-md);
+  padding-block: var(--space-md);
+}
+
+#hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero-2nd-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--space-sm);
+  padding-left: var(--space-lg);
+}
+
+#and {
+  font-size: 6rem;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#web-development {
+  font-size: 6rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#graphic-design {
+  font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  padding: 0;
+  margin: 0;
+  font-weight: 200;
+}
+
+#hero-section-lower {
+  display: flex;
+  flex-direction: row;
+  min-height: 50vh;
+}
+
+#hero-description {
+  padding-inline: var(--space-lg);
+  margin-top: var(--space-sm);
+  flex: 60%;
+  will-change: transform, opacity;
+  line-height: 1.5;
+  font-kerning: normal;
+}
+
+#hero-description,
+#hero-description *,
+#hero-description div,
+#hero-description span {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 1.25rem;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+#hero-description .split-line,
+#hero-description .split-word {
+  font-family: "JetBrains Mono", monospace !important;
+  font-weight: 100 !important;
+  font-size: 1.25rem !important;
+  line-height: inherit !important;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hero-description div {
+  display: inline-block;
+}
+
+#image-animation-container {
+  flex: 40%;
+  margin-top: var(--space-sm);
+  margin-right: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+#image-animation-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+#projects-title {
+  padding-block: var(--space-lg);
+  padding-inline: var(--space-md);
+}
+
+#projects-title h2 {
+  font-size: 5rem;
+}
+
+#projects-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: var(--space-sm);
+  column-gap: var(--space-sm);
+  padding-inline: var(--space-md);
+}
+
+.project-container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.project-image {
+  will-change: transform, opacity;
+}
+
+#projects,
+#hero-section-lower,
+#image-animation-container {
+  overflow: visible !important;
+}
+
+.is-flipping .gallery-images {
+  opacity: 0;
+}
+
+body.is-flipping .project-container {
+  pointer-events: none;
+  overflow: visible;
+}
+
+body:not(.is-flipping) .project-container {
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.project-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-content: center;
+  color: white;
+  text-align: left;
+  padding-inline: var(--space-md);
+}
+
+.project-title {
+  margin-bottom: var(--space-xs);
+  font-size: 2rem;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--space-xs);
+}
+
+.project-description p {
+  border: 1px solid white;
+  border-radius: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.left-column h1 {
+  font-size: 12.5rem;
+}
+
+.left-column span {
+  font-family: "Playfair Display", serif;
+  font-weight: 200;
+  margin-top: -3%;
+  font-size: 3.5rem;
+  align-self: center;
+  color: #ff5900;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:visited {
+  color: white;
+}

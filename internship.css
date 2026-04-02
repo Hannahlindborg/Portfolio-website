@@ -1,0 +1,85 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+#smooth-content {
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+#hero-image-container {
+  margin-bottom: var(--space-xs);
+}
+
+#internship-hero-image-description {
+  padding-left: var(--space-md);
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+#internship-info-section {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-inline: var(--space-md);
+  column-gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  background-color: white;
+  overflow: hidden;
+}
+
+#internship-info-section h2 {
+  margin-top: 0;
+}
+
+#left-section {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-md);
+}
+
+#right-section {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-xl);
+}
+
+.internship-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#right-section h1 {
+  margin-block: 0;
+  font-weight: 800;
+}
+
+#right-section span {
+  font-weight: 200;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+#right-section p {
+  max-width: 75ch;
+}
+
+.internship-img-container span {
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.internship-list {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-2xs);
+}

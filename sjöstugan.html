@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sjöstugan Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Luxurious+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sjöstugan.css" />
+    <link rel="stylesheet" href="transitions.css" />
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header>
+          <nav aria-label="main">
+            <ul>
+              <div class="left-side">
+                <li class="name" id="firstname">
+                  <a href="index.html">Hannah</a>
+                </li>
+                <li class="name" id="lastname">
+                  <a href="index.html">Lindborg</a>
+                </li>
+              </div>
+              <div class="right-side">
+                <li><a href="index.html">WORK</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+              </div>
+            </ul>
+          </nav>
+        </header>
+        <main
+          id="swup"
+          class="transition-reveal"
+          data-flip-id="project-showcase"
+        >
+          <div id="intro-section">
+            <div id="intro-left-container">
+              <h1>Sjöstugan</h1>
+              <span>Web Design</span>
+            </div>
+            <div id="intro-right-container">
+              <div id="brief-container">
+                <p>
+                  The concept for Sjöstugan is a family owned Bed & Breakfast
+                  where the guests stay in rustic cabins located on the
+                  property.
+                </p>
+              </div>
+              <div id="delivery-container">
+                <div class="role-container">
+                  <span>Role:</span>
+                  <p>UX & UI design</p>
+                </div>
+                <div class="role-container">
+                  <span>Scope:</span>
+                  <p>Research, IA, flows, visual design, prototyping</p>
+                </div>
+                <div class="role-container">
+                  <span>Platform:</span>
+                  <p>Custom front-end build (HTML, CSS, JavaScript)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="hero-image-container">
+            <img src="images/sjöstugan-display.webp" alt="" data-speed="0.5" />
+          </div>
+          <p id="hero-description">Final desktop homepage</p>
+          <section id="problem">
+            <h2>Problem</h2>
+            <p>
+              Users needed a way to quickly find all the relevant information,
+              understand offerings, and reach out to the owners regarding
+              interest.
+            </p>
+            <p>
+              The business needed a webpage that conveyed the spirit of the
+              brand and instilled trust in their audience...
+            </p>
+          </section>
+          <section id="needs-and-flows">
+            <h2>Key user needs & flows</h2>
+            <p>
+              To ensure key tasks were frictionless, I mapped the primary user
+              needs to clear navigation and content flows.
+            </p>
+            <div id="user-needs" data-speed="1.2">
+              <div class="needs-container">
+                <h3>Finding the right cabin</h3>
+                <p>
+                  Users need to quickly assess cabin size, amenities, and
+                  suitability for their group.
+                </p>
+                <ul class="user-flow">
+                  <li>Home</li>
+                  <li><span class="arrow">&darr;</span></li>
+                  <li>Our Cabins</li>
+                  <li><span class="arrow">&darr;</span></li>
+                  <li>Cabin Details</li>
+                </ul>
+              </div>
+              <div class="needs-container">
+                <h3>User Reviews</h3>
+                <p>Users need to build trust before committing to a booking.</p>
+                <div class="user-flows">
+                  <ul class="user-flow">
+                    <li>Home</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Scroll to Review section</li>
+                  </ul>
+
+                  <ul class="user-flow">
+                    <li>Home</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Our Cabins</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Cabin Page</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Scroll to Review section</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="needs-container">
+                <h3>Booking & Contacting</h3>
+                <p>
+                  Users need to effortlessly contact the owners to notify
+                  interest and discover availability.
+                </p>
+                <div class="user-flows">
+                  <ul class="user-flow">
+                    <li>Home</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Booking Page</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Submit Booking form</li>
+                  </ul>
+
+                  <ul class="user-flow">
+                    <li>Home</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Our Cabins</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Cabin Page</li>
+                    <li><span class="arrow">&darr;</span></li>
+                    <li>Submit prefilled booking form</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="sjöstugan-typography">
+            <div id="luxurious-script">
+              <p>Display Typeface</p>
+              <span>Sjöstugan</span>
+              <p>Luxurious Script</p>
+            </div>
+            <div id="playfair-display">
+              <p>Smaller Headings</p>
+              <span>Bed & Breakfast</span>
+              <p>Playfair Script</p>
+            </div>
+            <div id="lora">
+              <p>Bodytext</p>
+              <span>Our homemade breakfast is included in every stay</span>
+              <p>Lora</p>
+            </div>
+          </section>
+          <section id="sjöstugan-color-palette">
+            <div id="color-left-column">
+              <img
+                id="color-background-img"
+                src="images/Screenshot 2026-02-17 203341.png"
+                alt=""
+              />
+              <div class="swatch" id="sjöstugan-primary-color">
+                <div class="text-div">
+                  <span class="color-heading">Primary color</span>
+                  <span>Falu Red</span>
+                </div>
+                <div class="hidden-hex-code">
+                  <span>#822E21</span>
+                </div>
+              </div>
+              <div class="swatch" id="sjöstugan-secondary-color">
+                <div class="text-div">
+                  <span class="color-heading">Secondary Color</span>
+                  <span>Scandinavian Blue</span>
+                </div>
+                <div class="hidden-hex-code">
+                  <span>#2A3B4C</span>
+                </div>
+              </div>
+              <div class="swatch" id="sjöstugan-accent-color">
+                <div class="text-div">
+                  <span class="color-heading">Accent Color</span>
+                  <span>Lake Tint</span>
+                </div>
+                <div class="hidden-hex-code">
+                  <span>#6A8AA5</span>
+                </div>
+              </div>
+            </div>
+            <div id="color-right-column">
+              <p>
+                Sjöstugans color palette is highly inspired by the traditional
+                colors of the Dalecarlia region, adapted to be suitable for the
+                web.
+              </p>
+              <p>
+                The falu-red is the signature color for houses in the area, as
+                well as the colors of the cabins that the guests stay in.
+              </p>
+              <p>
+                The decorative illustrations draw from the traditional pattern
+                called kurbits, simplified slightly for the use case.
+              </p>
+              <p>
+                The typography balances an expressive script for brand tone with
+                elegant headings and a highly readable serif for bodytext.
+              </p>
+            </div>
+          </section>
+          <section id="scroll-video">
+            <video id="homepage-scroll-video" autoplay muted loop>
+              <source
+                src="images/homepage-scroll.mp4"
+                type="video/mp4"
+                data-speed="0.5"
+              />
+            </video>
+            <p>Homepage scroll interaction</p>
+          </section>
+          <section id="webpage-mockups">
+            <div class="webpage-image pinned">
+              <img src="images/sjöstugan/Cabin index page.webp" alt="" />
+            </div>
+            <div class="webpage-image pinned">
+              <img src="images/sjöstugan/lillstugan gallery.webp" alt="" />
+            </div>
+            <div class="webpage-image pinned">
+              <img src="images/sjöstugan/amenities section.webp" alt="" />
+            </div>
+            <div class="webpage-image pinned">
+              <img src="images/sjöstugan/Abous us page.webp" alt="" />
+            </div>
+            <div class="webpage-image pinned">
+              <img src="images/sjöstugan/Find us section.webp" alt="" />
+            </div>
+          </section>
+          <section id="sjöstugan-mobile-mockups">
+            <div class="mobile-img-container">
+              <img
+                src="images/Screenshot_20260217_210243_Samsung Internet.jpg"
+                alt=""
+              />
+            </div>
+            <div class="mobile-img-container">
+              <img
+                src="images/Screenshot_20260217_211309_Samsung Internet.jpg"
+                alt=""
+              />
+            </div>
+            <div class="mobile-img-container">
+              <img
+                src="images/Screenshot_20260217_210243_Samsung Internet.jpg"
+                alt=""
+              />
+            </div>
+          </section>
+          <section id="project-outcome-section">
+            <div id="project-outcome">
+              <h2>Project Outcome</h2>
+              <p>
+                The final website conveys the feeling of the brand, whilst
+                featuring all the necessary information.
+              </p>
+              <p>
+                The page is responsive working for the guest booking leisurely
+                on their computer as well as the last minute booker on their
+                phone.
+              </p>
+              <p>
+                Future implementations: The homepage explore section could be
+                customised based on the season to attract more visitors.
+              </p>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <section id="footer-information">
+            <div class="footer-left">
+              <img src="images/Screenshot 2026-03-01 122633.png" alt="" />
+            </div>
+            <div class="footer-right">
+              <h3>Let's work together</h3>
+              <ul>
+                <li>
+                  <a href="mailto:hannah.lindborg@gmail.com">
+                    hannah.lindborg@gmail.com
+                  </a>
+                </li>
+                <li>LinkedIn</li>
+              </ul>
+            </div>
+          </section>
+          <div id="copyright">
+            <p>© 2026 Hannah Lindborg</p>
+          </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Flip.min.js"></script>
+        <script src="https://unpkg.com/@swup/js-plugin@3"></script>
+        <script src="https://unpkg.com/@swup/parallel-plugin@0"></script>
+        <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+        <script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+        <script type="module" src="global.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

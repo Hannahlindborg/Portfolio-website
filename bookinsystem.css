@@ -1,0 +1,249 @@
+/* Swup reveal transition */
+#swup.transition-reveal {
+  background-color: white;
+}
+
+#smooth-content {
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+p {
+  max-width: 75ch;
+}
+
+.role-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  column-gap: var(--space-2xs);
+}
+
+#delivery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.role-container span {
+  font-weight: 800;
+}
+
+#hero-image-container {
+  width: 100%;
+  height: auto;
+}
+
+#hero-video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero-description {
+  font-style: italic;
+  margin-top: var(--space-xs);
+  margin-left: var(--space-md);
+}
+
+#management-problem-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-sm);
+  margin-block: var(--space-md);
+  padding-inline: var(--space-md);
+  justify-content: center;
+  align-items: center;
+}
+
+#problem-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--space-md);
+}
+
+#customer-problem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a3b4c;
+  color: white;
+  padding-inline: var(--space-md);
+  padding-block: var(--space-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 1rem;
+}
+
+#management-problem h3,
+#customer-problem h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+#management-problem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a3b4c;
+  color: white;
+  padding-inline: var(--space-sm);
+  padding-block: var(--space-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 1rem;
+}
+
+#management-problem,
+#customer-problem {
+  max-width: 75ch;
+}
+
+#bookingform-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#booking-img-section,
+#login-img-section {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.img-container p {
+  margin-top: 0;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#backend-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#db-and-docker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-inline: var(--space-md);
+}
+
+#db-and-docker img {
+  object-fit: contain;
+}
+
+#admin-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-top: var(--space-lg);
+}
+
+#admin-dashboard-text {
+  padding-inline: var(--space-md);
+}
+
+#admin-images {
+  display: flex;
+  flex-direction: column;
+}
+
+#admin-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-2xs);
+}
+
+.section-title {
+  justify-self: center;
+}
+
+#admin-dashboard-text #admin-dashboard-text,
+#admin-section-text,
+#bookingform-text,
+.image-caption,
+#backend-text,
+#security-text,
+#restriction-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#booking-route {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#booking-flow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#booking-logic-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-2xs);
+  list-style-type: none;
+  align-items: center;
+  padding-left: 0;
+}
+
+#restriction-images {
+  display: flex;
+  flex-direction: row;
+  padding-inline: var(--space-md);
+  column-gap: var(--space-sm);
+  max-width: 70vw;
+  align-items: flex-start;
+  justify-self: center;
+}
+
+#restriction-images img {
+  object-fit: contain;
+}
+
+#security {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-sm);
+}
+
+#edit-images {
+  display: flex;
+  flex-direction: row;
+  padding-inline: var(--space-md);
+  column-gap: var(--space-sm);
+}
+
+#edit-images .img-container {
+  aspect-ratio: 5/4;
+}
+
+#edit-images img {
+  object-fit: contain;
+}
+
+#management-project-outcome {
+  padding-left: var(--space-md);
+}

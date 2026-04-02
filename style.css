@@ -1,0 +1,260 @@
+:root {
+  --space-2xs: clamp(0.25rem, 0.5vw, 0.375rem);
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 2vw, 1.25rem);
+  --space-md: clamp(1.25rem, 4vw, 2.5rem);
+  --space-lg: clamp(2rem, 8vh, 5rem);
+  --space-xl: clamp(4rem, 12vh, 8rem);
+  scrollbar-gutter: stable;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Global font sizes */
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#intro-left-container span {
+  font-weight: 200;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-right: var(--space-md);
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+.right-side li,
+.right-side a {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.1em;
+  text-decoration-line: none;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--space-md);
+}
+
+.left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.name a {
+  font-size: 1.5rem;
+}
+
+.left-side #firstname a {
+  font-family: "Inter", serif !important;
+  font-weight: 500;
+  text-decoration-line: none;
+}
+
+.left-side #lastname a {
+  font-family: "Playfair Display", serif !important;
+  text-decoration-line: none;
+}
+
+/* Intro section */
+
+#intro-section {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  flex: 60% 40%;
+  padding-bottom: var(--space-sm);
+}
+
+#intro-left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  padding-left: var(--space-md);
+}
+
+#intro-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: var(--space-md);
+}
+
+#brief-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#brief-container h3 {
+  margin-bottom: 0;
+}
+
+#brief-container p {
+  margin-bottom: 0;
+}
+
+#delivery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#delivery-container h3 {
+  margin-bottom: 0;
+}
+
+#delivery-container p {
+  margin-bottom: 0;
+}
+
+#hero-image-container {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+#hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#contept-section {
+  max-width: 40vw;
+  height: 312px;
+  align-content: center;
+  margin-left: var(--space-md);
+}
+
+/* Color swatches */
+.swatch {
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
+}
+
+.text-div {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xs);
+  align-items: flex-end;
+}
+
+.swatch:hover {
+  transform: scale(1.2);
+}
+
+.swatch:hover .text-div {
+  display: none;
+}
+
+.swatch:hover .hidden-hex-code {
+  display: flex;
+}
+
+.hidden-hex-code {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  background-color: white;
+  color: black;
+  z-index: 10;
+}
+
+footer a {
+  color: black;
+  text-decoration-line: none;
+}
+
+footer a:visited {
+  color: black;
+}
+
+#footer-information {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-inline: var(--space-md);
+  padding-top: var(--space-xs);
+}
+
+#footer-information p {
+  margin-block: 0;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-left img {
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-right h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.footer-right ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  row-gap: var(--space-xs);
+}
+
+#copyright {
+  display: flex;
+  justify-self: center;
+  padding-bottom: var(--space-xs);
+}

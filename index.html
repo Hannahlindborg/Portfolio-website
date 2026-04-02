@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Luxurious+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="work.css" />
+    <link rel="stylesheet" href="transitions.css" />
+  </head>
+  <body>
+    <div id="smooth-wrapper" class="smooth-scroll">
+      <div id="smooth-content">
+        <header>
+          <nav aria-label="main">
+            <ul>
+              <div class="left-side">
+                <li class="name" id="firstname"><a href="index.html">Hannah</a></li>
+                <li class="name" id="lastname"><a href="index.html">Lindborg</a></li>
+              </div>
+              <div class="right-side">
+                <li id="workbutton">WORK</li>
+                <li><a href="about.html">ABOUT ME</a></li>
+              </div>
+            </ul>
+          </nav>
+        </header>
+        <main id="swup" class="transition-reveal">
+          <section id="hero-section-upper">
+            <div id="hero-text">
+              <h1 id="graphic-design">GRAPHIC DESIGN</h1>
+              <div id="hero-2nd-row">
+                <span id="and">&</span>
+                <h1 id="web-development">WEB DEVELOPMENT</h1>
+              </div>
+            </div>
+          </section>
+          <section id="projects">
+          <div id="hero-section-lower">
+            <p id="hero-description">
+              Currently finishing my studies in Graphic Design & Web Development. Using my creativity and technical skills I design and develop both for digital and physical spaces.
+            </p>
+            <div id="image-animation-container">
+              <img
+                src="images/Album showcase.webp"
+                alt=""
+                id="hero-img-2"
+                data-flip-id="album"
+                class="gallery-images"
+              />
+              <img
+                src="images/outdoor signage.webp"
+                alt=""
+                id="hero-img-3"
+                class="gallery-images"
+                data-flip-id="sunshake"
+              />
+              <img
+                src="images/tundoschakt.webp"
+                alt=""
+                id="hero-img-1"
+                data-flip-id="internship"
+                class="gallery-images"
+              />
+                <img
+                src="images/sjöstugan/booking step1.png"
+                alt=""
+                id="hero-img-1"
+                data-flip-id="bookingsystem"
+                class="gallery-images"
+              />
+                <img
+                src="images/sjöstugan-display.webp"
+                alt=""
+                id="hero-img-1"
+                data-flip-id="sjöstugan"
+                class="gallery-images"
+              />
+            </div>
+          </div>
+          <section id="projects-title">
+            <h2>PROJECTS</h2>
+          </section>
+          <section id="projects-showcase">
+            <div class="project-container">
+              <a href="sjöstugan.html" alt="">
+                <img
+                  src="images/sjöstugan-display.webp"
+                  alt=""
+                  data-flip-id="sjöstugan"
+                  class="project-image"
+                />
+                <div class="project-overlay">
+                  <h2 class="project-title">
+                    Sjöstugan<br />
+                    Bed & Breakfast
+                  </h2>
+                  <div class="project-description">
+                    <p>Web design</p>
+                    <p>UX design</p>
+                    <p>Brand identity</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+               <div class="project-container">
+              <a href="/bookingsystem.html" alt="" data-flip-id="project-4">
+                <img src="/images/sjöstugan/booking step1.png" alt="" class="project-image" data-flip-id="bookingsystem" />
+                <div class="project-overlay">
+                  <h2 class="project-title">Sjöstugan<br />Custom Booking & Management System</h2>
+                  <div class="project-description">
+                    <p>Full-stack dev</p>
+                    <p>UX design</p>
+                    <p>Database</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+             <div class="project-container">
+              <a href="/internship.html" alt="">
+                <img
+                  src="images/tundoschakt.webp"
+                  alt=""
+                  data-flip-id="internship"
+                  class="project-image"
+                />
+                <div class="project-overlay">
+                  <h2 class="project-title">Internship Projects</h2>
+                  <div class="project-description">
+                    <p>Web design</p>
+                    <p>UX design</p>
+                    <p>Social media</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="project-container">
+              <a href="sunshake.html" alt="">
+                <img
+                  src="images/outdoor signage.webp"
+                  alt=""
+                  data-flip-id="sunshake"
+                  class="project-image"
+                />
+                <div class="project-overlay">
+                  <h2 class="project-title">
+                    Sunshake<br />Juice & smoothie bar
+                  </h2>
+                  <div class="project-description">
+                    <p>Brand Identity</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="project-container">
+              <a href="albumproject.html" alt="">
+                <img
+                  src="images/Album showcase.webp"
+                  alt=""
+                  class="project-image"
+                  data-flip-id="album"
+                />
+                <div class="project-overlay">
+                  <h2 class="project-title">A Taste of Music</h2>
+                  <div class="project-description">
+                    <p>Album cover design</p>
+                    <p>Concept design</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <section id="footer-information">
+            <div class="footer-left">
+              <img src="images/sjöstugan/Screenshot 2026-03-01 122633 - Copy.png" alt="" />
+            </div>
+            <div class="footer-right">
+              <h3>Let's work together</h3>
+              <ul>
+                <li>
+                  <a href="mailto:hannah.lindborg@gmail.com">
+                    hannah.lindborg@gmail.com
+                  </a>
+                </li>
+                <li>LinkedIn</li>
+              </ul>
+            </div>
+          </section>
+          </section>
+          <div id="copyright">
+            <p>© 2026 Hannah Lindborg</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Flip.min.js"></script>
+    <script src="https://unpkg.com/@swup/js-plugin@3"></script>
+    <script src="https://unpkg.com/@swup/parallel-plugin@0"></script>
+    <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+    <script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+    <script type="module" src="global.js"></script>
+  </body>
+</html>

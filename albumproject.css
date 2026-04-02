@@ -1,0 +1,90 @@
+/* Swup reveal transition */
+#swup.transition-reveal {
+  background-color: white;
+}
+
+#smooth-content {
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+.album-cover-left h2,
+.album-cover-right h2 {
+  margin-bottom: var(--space-xs);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.album-cover-left {
+  display: flex;
+  flex-direction: row;
+  padding-inline: var(--space-md);
+  background-color: white;
+}
+
+.album-cover-right {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-inline: var(--space-md);
+  background-color: white;
+}
+
+.single-cover-left {
+  flex: 60%;
+}
+
+.single-cover-right {
+  flex: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-cover-right span {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.album-cover-left p,
+.album-cover-right p {
+  max-width: 75ch;
+}
+
+.coverimage-container {
+  width: 100%;
+  height: auto;
+}
+
+.coverimage-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#album-set-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: var(--space-xl);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#collection-cover {
+  max-width: 60vw;
+  padding-top: var(--space-xl);
+}
+
+#album-set-container p {
+  font-style: italic;
+  padding-inline: var(--space-xl);
+  text-align: center;
+}

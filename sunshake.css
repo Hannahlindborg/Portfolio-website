@@ -1,0 +1,311 @@
+/* Swup reveal transition */
+#swup.transition-reveal {
+  background-color: white;
+}
+
+#smooth-content {
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+/* Logo section */
+#logo-row {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.logo-image-container {
+  max-width: 100vw;
+}
+
+.logo-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-container {
+  visibility: hidden;
+}
+
+#gif-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo-row p,
+#gif-container p {
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+#intro-right-container {
+  row-gap: var(--space-sm);
+}
+
+#delivery-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-xs);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#delivery-container span {
+  font-weight: 800;
+}
+
+#delivery-container p {
+  margin-top: 0;
+}
+
+#concept-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: var(--space-lg);
+  margin-inline: var(--space-md);
+  height: 50vh;
+}
+
+#concept-section p {
+  max-width: 75ch;
+}
+
+/* Color section */
+
+#color-img-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+#color-background-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.color-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+
+
+#swatch-primary {
+  background-color: #ffb703;
+  color: #fdfce0;
+  width: 380px;
+  height: 40%;
+  top: 0;
+  left: 2%;
+}
+
+#swatch-secondary {
+  background-color: #fb8500;
+  color: #fdfce0;
+  width: 300px;
+  height: 20%;
+  top: 44%;
+  left: 2%;
+}
+
+#swatch-neutral-cream {
+  background-color: #fdfce0;
+  color: #453c30;
+  width: 236px;
+  height: 16%;
+  top: 66%;
+  left: 2%;
+}
+
+#swatch-neutral-brown {
+  background-color: #453c30;
+  color: #fdfce0;
+  width: 260px;
+  height: 16%;
+  bottom: 20%;
+  right: 2%;
+}
+
+#swatch-accent {
+  background-color: #809e23;
+  color: #fdfce0;
+  width: 236px;
+  height: 172px;
+  bottom: 2%;
+  right: 2%;
+}
+
+.hidden-hex-code span {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+/* Typography section */
+#typography-system-section {
+  height: 100vh;
+  background-color: #fdfce0;
+  display: flex;
+  flex-direction: row;
+  color: #453c30;
+  justify-content: space-around;
+  margin-top: 0;
+}
+
+#bebas-neue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bebas-neue-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#bebas-sample-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+#acumin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#acumin-sample-text {
+  font-family: "acumin-pro-condensed", sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.acumin-text {
+  font-family: "acumin-pro-condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+/* Product section */
+
+#menu-right-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+#menu-right-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Real life usage section*/
+
+#real-life-usage-section {
+  display: flex;
+  flex-direction: row;
+  max-height: 860px;
+  margin-inline: var(--space-lg);
+  column-gap: var(--space-lg);
+}
+
+#real-life-left-container {
+  width: 50%;
+}
+
+#real-life-left-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#real-life-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+#real-life-right-container span {
+  color: #fb8500;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.brand-words div {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* Instragram stories */
+
+#instagram-story-section {
+  background-color: #ffb703;
+  padding-block: var(--space-xl);
+}
+
+#instagram-story-flex {
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+}
+
+.instagram-story-container {
+  padding: var(--space-sm);
+}
+
+.instagram-story-container img,
+.instagram-story-container video {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+#gif {
+  background-image: url("images/story2-placeholder.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mockup-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mockup-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#outcome-section {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--space-md);
+  padding-block: var(--space-sm);
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: 50vh;
+}
