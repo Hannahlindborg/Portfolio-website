@@ -1,11 +1,15 @@
 // Gsap
 export function initWorkPage() {
-  scrollToProjects();
-  scrambleTitle();
-  imageAnimation();
-  aboutText();
-  //heroGalleryAnimation();
-  hoverProject();
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 769px)", () => {
+    scrollToProjects();
+    scrambleTitle();
+    imageAnimation();
+    aboutText();
+    //heroGalleryAnimation();
+    hoverProject();
+  });
 }
 
 function scrollToProjects() {
@@ -30,22 +34,25 @@ function scrambleTitle() {
 }
 
 function imageAnimation() {
+  let mm = gsap.matchMedia();
   const state = Flip.getState(".gallery-images");
 
-  Flip.from(state, {
-    targets: ".project-image",
-    duration: 1,
-    absolute: true,
-    props: "object-fit, object-position",
-    ease: "power2.inOut",
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: "#projects-showcase",
-      start: "top bottom",
-      end: "top 20%",
-      scrub: 1,
-      toggleClass: { targets: "body", className: "is-flipping" },
-    },
+  mm.add("(min-width: 769px)", () => {
+    Flip.from(state, {
+      targets: ".project-image",
+      duration: 1,
+      absolute: true,
+      props: "object-fit, object-position",
+      ease: "power2.inOut",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#projects-showcase",
+        start: "top bottom",
+        end: "top 20%",
+        scrub: 1,
+        toggleClass: { targets: "body", className: "is-flipping" },
+      },
+    });
   });
 }
 

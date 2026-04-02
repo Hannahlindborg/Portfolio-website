@@ -100,8 +100,6 @@ a:visited {
   font-size: 1.5rem;
 }
 
-
-
 #swatch-primary {
   background-color: #ffb703;
   color: #fdfce0;
@@ -308,4 +306,42 @@ a:visited {
   align-items: center;
   text-align: left;
   height: 50vh;
+}
+
+@media screen and (max-width: 1024px) {
+  #typography-system-section {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: var(--space-md);
+  }
+  #real-life-usage-section {
+    flex-direction: column-reverse;
+    background-color: white;
+    padding-block: var(--space-sm);
+    height: auto;
+  }
+
+  #real-life-right-container {
+    display: none;
+  }
+
+  #real-life-left-container {
+    width: 100%;
+  }
+  #real-life-left-container img {
+    object-position: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #instagram-story-flex {
+    flex-direction: column;
+  }
+
+  #instagram-story-container {
+    max-height: 100vh;
+  }
+  .logo-container {
+    visibility: visible;
+  }
 }

@@ -1,7 +1,11 @@
 export function initInternshipProjects() {
-  responsibilities();
-  skills();
-  takeaways();
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 769px)", () => {
+    responsibilities();
+    skills();
+    takeaways();
+  });
 }
 
 function responsibilities() {

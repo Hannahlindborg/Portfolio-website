@@ -1,12 +1,20 @@
 export function initSjöstuganProject() {
-  problemSection();
-  userflows();
-  colorPalette();
-  initVideoPlaying();
-  webmockups();
-  stackedCards();
-  mobilemockups();
-  outcomesection();
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 769px)", () => {
+    problemSection();
+    userflows();
+    colorPalette();
+    initVideoPlaying();
+    webmockups();
+    stackedCards();
+    mobilemockups();
+    outcomesection();
+  });
+
+  mm.add("max-width: 768px", () => {
+    initVideoPlaying();
+  });
 }
 
 function problemSection() {

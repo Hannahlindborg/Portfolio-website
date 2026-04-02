@@ -88,3 +88,14 @@ a:visited {
   padding-inline: var(--space-xl);
   text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .album-cover-left {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .album-cover-right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

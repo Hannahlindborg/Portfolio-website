@@ -1,11 +1,15 @@
 export function initSunshakeProject() {
-  logoSection();
-  logoGifSection();
-  colorPalette();
-  typographysection();
-  words();
-  mobilemockups();
-  outcomesection();
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 769px)", () => {
+    logoSection();
+    logoGifSection();
+    colorPalette();
+    typographysection();
+    words();
+    mobilemockups();
+    outcomesection();
+  });
 }
 
 function logoSection() {

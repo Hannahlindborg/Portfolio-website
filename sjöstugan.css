@@ -14,6 +14,7 @@ a:visited {
 .role-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-end;
   column-gap: var(--space-2xs);
 }
@@ -342,4 +343,60 @@ a:visited {
 
 #project-outcome p {
   max-width: 75ch;
+}
+
+@media screen and (max-width: 1024px) {
+  #user-needs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: var(--space-sm);
+  }
+  #sjöstugan-typography {
+    flex-direction: column;
+    row-gap: var(--space-md);
+  }
+  #luxurious-script {
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-md);
+  }
+  #playfair-display {
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-md);
+  }
+  #lora {
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-md);
+  }
+  #scroll-video {
+    padding-inline: var(--space-md);
+    padding-block: var(--space-md);
+  }
+  #sjöstugan-mobile-mockups {
+    flex-wrap: wrap;
+    height: auto;
+    row-gap: var(--space-sm);
+  }
+  .mobile-img-container img {
+    max-height: 100vh;
+  }
+
+  #project-outcome-section {
+    height: auto;
+  }
+  #project-outcome {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #user-needs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  #needs-container {
+    visibility: visible;
+  }
 }

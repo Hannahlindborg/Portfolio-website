@@ -22,9 +22,10 @@ a:visited {
   margin-top: 0;
 }
 
-#internship-info-section {
+.internship-row {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   margin-inline: var(--space-md);
   column-gap: var(--space-lg);
   margin-top: var(--space-lg);
@@ -32,22 +33,26 @@ a:visited {
   overflow: hidden;
 }
 
-#internship-info-section h2 {
+.internship-row h2 {
   margin-top: 0;
 }
 
-#left-section {
-  margin-top: var(--space-md);
+.left-section {
   display: flex;
   flex-direction: column;
+  column-gap: var(--space-md);
+  justify-content: center;
   row-gap: var(--space-md);
+  padding-bottom: var(--space-md);
 }
 
-#right-section {
-  margin-top: var(--space-md);
+.right-section {
   display: flex;
   flex-direction: column;
-  row-gap: var(--space-xl);
+  column-gap: var(--space-md);
+  justify-content: center;
+  row-gap: var(--space-md);
+  padding-bottom: var(--space-md);
 }
 
 .internship-img-container img {
@@ -82,4 +87,28 @@ a:visited {
   display: flex;
   flex-direction: column;
   row-gap: var(--space-2xs);
+}
+
+#internship-takeaways {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: var(--space-md);
+  padding-block: var(--space-md);
+}
+
+#internship-takeaways p {
+  max-width: 75ch;
+}
+
+@media screen and (max-width: 768px) {
+  .internship-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #i-row-1 {
+    flex-direction: column-reverse;
+  }
 }

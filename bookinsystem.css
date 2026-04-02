@@ -65,7 +65,7 @@ p {
   column-gap: var(--space-md);
 }
 
-#customer-problem {
+.problem {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,29 +76,15 @@ p {
   padding-block: var(--space-md);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   border-radius: 1rem;
+  visibility: hidden;
 }
 
-#management-problem h3,
-#customer-problem h3 {
+.problem h3 {
   margin-top: 0;
   margin-bottom: var(--space-sm);
 }
 
-#management-problem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #2a3b4c;
-  color: white;
-  padding-inline: var(--space-sm);
-  padding-block: var(--space-md);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  border-radius: 1rem;
-}
-
-#management-problem,
-#customer-problem {
+.problem p {
   max-width: 75ch;
 }
 
@@ -107,6 +93,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: var(--space-xs);
 }
 
 #booking-img-section,

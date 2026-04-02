@@ -25,18 +25,18 @@
 /* Global font sizes */
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: 800;
   margin-bottom: 0;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 600;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 400;
 }
 
@@ -98,6 +98,8 @@ nav ul {
   height: 200px;
   flex: 60% 40%;
   padding-bottom: var(--space-sm);
+  background-color: white;
+  position: relative;
 }
 
 #intro-left-container {
@@ -142,6 +144,24 @@ nav ul {
 
 #delivery-container p {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  #intro-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    row-gap: var(--space-xs);
+    padding-bottom: var(--space-sm);
+  }
+
+  #intro-left-container {
+    align-items: center;
+  }
+
+  #intro-right-container {
+    padding-left: var(--space-md);
+  }
 }
 
 #hero-image-container {

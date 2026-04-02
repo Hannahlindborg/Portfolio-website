@@ -1,6 +1,9 @@
 export function initAlbumProject() {
-  collectionmockup();
-  albumcovers();
+  let mm = gsap.matchMedia();
+  mm.add("(min-width: 769px)", () => {
+    collectionmockup();
+    albumcovers();
+  });
 }
 
 function collectionmockup() {

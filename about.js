@@ -1,10 +1,14 @@
 export function initAboutPage() {
-  splitTitle();
-  aboutText();
-  portraitImage();
-  skillSection();
-  toolSection();
-  educationSection();
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 769px)", () => {
+    splitTitle();
+    aboutText();
+    portraitImage();
+    skillSection();
+    toolSection();
+    educationSection();
+  });
 }
 
 function splitTitle() {

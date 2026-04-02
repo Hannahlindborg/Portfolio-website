@@ -118,10 +118,6 @@ a:visited {
   padding-inline: var(--space-md);
 }
 
-#projects-title h2 {
-  font-size: 5rem;
-}
-
 #projects-showcase {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -192,6 +188,7 @@ body:not(.is-flipping) .project-container {
 .project-description {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   column-gap: var(--space-xs);
 }
 
@@ -234,4 +231,64 @@ footer a {
 
 footer a:visited {
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  #graphic-design {
+    font-size: 4.5rem;
+  }
+  #web-development {
+    font-size: 4.5rem;
+  }
+  #and {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #projects-showcase {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projects-showcase {
+    grid-template-columns: 1fr;
+  }
+  .project-overlay {
+    opacity: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-title {
+    text-align: center;
+  }
+  .project-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #image-animation-container {
+    display: none;
+  }
+  #hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #graphic-design {
+    font-size: 3rem;
+  }
+  #web-development {
+    font-size: 3rem;
+  }
+  #and {
+    font-size: 3rem;
+  }
 }
