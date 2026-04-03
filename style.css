@@ -183,37 +183,13 @@ nav ul {
   margin-left: var(--space-md);
 }
 
-/* Color swatches */
-.swatch {
-  position: absolute;
-  transition: transform 0.2s ease-in-out;
-}
+/* Image credits section */
 
-.text-div {
+.image-credits {
   display: flex;
   flex-direction: column;
-  padding: var(--space-xs);
-  align-items: flex-end;
-}
-
-.swatch:hover {
-  transform: scale(1.2);
-}
-
-.swatch:hover .text-div {
-  display: none;
-}
-
-.swatch:hover .hidden-hex-code {
-  display: flex;
-}
-
-.hidden-hex-code {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  align-items: flex-start;
+  padding-inline: var(--space-md);
 }
 
 footer {

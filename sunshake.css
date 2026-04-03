@@ -117,18 +117,25 @@ a:visited {
   left: auto;
   right: auto;
   bottom: auto;
-  padding: 1rem;
+  padding: var(--space-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .text-div {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  padding: var(--space-xs);
 }
 
 #swatch-primary {
   background-color: #ffb703;
   color: #fdfce0;
+}
+
+.caption-1 {
+  padding-left: var(--space-md);
 }
 
 #swatch-secondary {
@@ -156,6 +163,32 @@ a:visited {
   font-weight: 400;
   font-style: normal;
   font-size: 1.5rem;
+}
+
+/* Color swatches */
+.swatch {
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
+}
+
+.swatch:hover {
+  transform: scale(1.2);
+}
+
+.swatch:hover .text-div {
+  display: none;
+}
+
+.swatch:hover .hidden-hex-code {
+  display: flex;
+}
+
+.hidden-hex-code {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 /* Typography section */
@@ -367,6 +400,11 @@ a:visited {
     grid-template-columns: 3fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   #swatch-primary {
     grid-column: 1/2;
   }
@@ -384,5 +422,20 @@ a:visited {
   }
   #acumin-text {
     font-size: 1rem;
+  }
+  .hidden-hex-code {
+    display: block;
+    padding: var(--space-xs);
+    align-items: flex-start;
+  }
+  #swatch-primary,
+  #swatch-secondary,
+  #swatch-neutral-cream,
+  #swatch-neutral-brown,
+  #swatch-accent {
+    align-items: flex-start;
+  }
+  .text-div {
+    align-items: flex-start;
   }
 }

@@ -11,6 +11,10 @@ a:visited {
   color: black;
 }
 
+a {
+  color: black;
+}
+
 .album-cover-left h2,
 .album-cover-right h2 {
   margin-bottom: var(--space-xs);

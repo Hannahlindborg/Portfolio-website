@@ -94,6 +94,7 @@ p {
   justify-content: center;
   align-items: center;
   padding-bottom: var(--space-xs);
+  padding-inline: var(--space-md);
 }
 
 #booking-img-section,
@@ -121,6 +122,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-inline: var(--space-md);
 }
 
 #db-and-docker {
@@ -148,6 +150,7 @@ p {
 #admin-images {
   display: flex;
   flex-direction: column;
+  padding-inline: var(--space-md);
 }
 
 #admin-list {
@@ -160,10 +163,19 @@ p {
   justify-self: center;
 }
 
+.image-caption {
+  padding-left: var(--space-md);
+}
+
+#security-text,
+#restriction-text,
+#edit-text {
+  padding-inline: var(--space-md);
+}
+
 #admin-dashboard-text #admin-dashboard-text,
 #admin-section-text,
 #bookingform-text,
-.image-caption,
 #backend-text,
 #security-text,
 #restriction-text {
@@ -178,6 +190,7 @@ p {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
+  padding-inline: var(--space-md);
 }
 
 #booking-flow {
@@ -197,11 +210,10 @@ p {
 }
 
 #restriction-images {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding-inline: var(--space-md);
   column-gap: var(--space-sm);
-  max-width: 70vw;
   align-items: flex-start;
   justify-self: center;
 }
@@ -217,14 +229,10 @@ p {
 }
 
 #edit-images {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding-inline: var(--space-md);
   column-gap: var(--space-sm);
-}
-
-#edit-images .img-container {
-  aspect-ratio: 5/4;
 }
 
 #edit-images img {
@@ -242,4 +250,52 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-inline: var(--space-md);
+}
+
+@media screen and (max-width: 1024px) {
+  #booking-img-section,
+  #login-img-section {
+    padding-inline: var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: var(--space-md);
+  }
+  .image-caption {
+    padding-left: 0;
+  }
+  #admin-dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  #admin-dashboard-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--space-sm);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #problem-div {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: var(--space-md);
+  }
+  #booking-img-section,
+  #login-img-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: var(--space-lg);
+  }
+  #booking-route,
+  #restriction-images,
+  #edit-images,
+  #db-and-docker {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-block: var(--space-md);
+    row-gap: var(--space-lg);
+  }
 }
