@@ -72,6 +72,12 @@ a:visited {
   font-kerning: normal;
 }
 
+#hero-1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #hero-description,
 #hero-description *,
 #hero-description div,
@@ -194,11 +200,11 @@ body:not(.is-flipping) .project-container {
 
 .project-description p {
   border: 1px solid white;
-  border-radius: 12px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  border-radius: 0.75rem;
+  margin-block: var(--space-xs);
+  font-size: 1rem;
+  padding-inline: 8px;
+  padding-block: 4px;
 }
 
 .left-column h1 {
@@ -252,6 +258,18 @@ footer a:visited {
   }
 }
 
+@media screen and (max-width: 920px) {
+  #graphic-design {
+    font-size: 3rem;
+  }
+  #web-development {
+    font-size: 3rem;
+  }
+  #and {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #projects-showcase {
     grid-template-columns: 1fr;
@@ -277,18 +295,46 @@ footer a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+  }
+  #hero-1 {
+    min-height: 70vh;
+    justify-content: center;
+  }
+  #hero-description {
+    flex: 100%;
+    padding-inline: var(--space-md);
+  }
+  .project-description {
+    justify-content: center;
+    row-gap: var(--space-2xs);
+  }
+  .project-description p {
+    margin-block: var(--space-2xs);
+  }
+  #projects-title {
+    padding-block: var(--space-sm);
+  }
+  #web-development {
+    opacity: 1;
+    font-size: 2.5rem;
+  }
+  #graphic-design {
+    font-size: 2.5rem;
+  }
+  #and {
+    font-size: 2.5rem;
   }
 }
 
-@media screen and (max-width: 920px) {
-  #graphic-design {
-    font-size: 3rem;
-  }
+@media screen and (max-width: 500px) {
   #web-development {
-    font-size: 3rem;
+    opacity: 1;
+    font-size: 2rem;
+  }
+  #graphic-design {
+    font-size: 2rem;
   }
   #and {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
