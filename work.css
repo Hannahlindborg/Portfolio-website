@@ -65,7 +65,7 @@ a:visited {
 }
 
 #hero-description {
-  padding-inline: var(--space-lg);
+  padding-inline: var(--space-md);
   margin-top: var(--space-sm);
   flex: 60%;
   will-change: transform, opacity;

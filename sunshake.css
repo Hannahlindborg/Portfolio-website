@@ -463,3 +463,40 @@ a:visited {
     align-items: flex-start;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #color-img-container {
+    height: 100vh;
+  }
+
+  #color-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #menu-right-container {
+    height: 70vh;
+  }
+  #menu-right-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mockup-image-container {
+    height: 50vh;
+  }
+  .mockup-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #outcome-section {
+    align-items: flex-start;
+  }
+  .instagram-story-container {
+    padding-inline: var(--space-md);
+  }
+  #concept-section {
+    align-items: flex-start;
+  }
+}

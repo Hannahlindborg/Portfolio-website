@@ -112,3 +112,9 @@ a:visited {
     flex-direction: column-reverse;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #internship-takeaways {
+    align-items: flex-start;
+  }
+}

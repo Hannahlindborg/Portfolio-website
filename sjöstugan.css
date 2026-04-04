@@ -17,12 +17,19 @@ a:visited {
   flex-wrap: wrap;
   align-items: flex-end;
   column-gap: var(--space-2xs);
+  row-gap: var(--space-2xs);
+}
+
+.role-container p {
+  margin-top: 0;
 }
 
 #delivery-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  row-gap: var(--space-xs);
+  padding-top: var(--space-xs);
 }
 
 .role-container span {
@@ -439,5 +446,35 @@ a:visited {
   }
   #project-outcome {
     visibility: visible;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .role-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #problem {
+    align-items: flex-start;
+    padding-top: var(--space-md);
+  }
+  #needs-and-flows {
+    padding-top: var(--space-md);
+    align-items: flex-start;
+  }
+  #scroll-video video {
+    height: 100%;
+    width: 100%;
+  }
+  #webpage-mockups {
+    row-gap: 0;
+    padding-bottom: 0;
+  }
+  .webpage-image {
+    padding-inline: 0;
+    padding-block: 0;
+  }
+  #project-outcome {
+    align-items: flex-start;
   }
 }

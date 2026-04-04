@@ -103,3 +103,26 @@ a {
     flex-direction: column-reverse;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #album-set-container img {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .album-cover-left h2,
+  .album-cover-right h2 {
+    text-align: left;
+  }
+  .single-cover-right,
+  .single-cover-left {
+    align-items: flex-start;
+  }
+  #album-set-container {
+    padding-bottom: var(--space-sm);
+  }
+  #collection-cover {
+    padding-top: var(--space-lg);
+  }
+}
