@@ -91,7 +91,7 @@ a:visited {
   background-color: #2a3b4c;
   border-radius: 16px;
   color: white;
-  padding-inline: var(--space-sm);
+  padding-inline: var(--space-md);
   padding-block: var(--space-sm);
   visibility: hidden;
 }
@@ -309,7 +309,6 @@ a:visited {
 }
 
 #sjöstugan-mobile-mockups {
-  background-color: #2a3b4c;
   display: flex;
   flex-direction: column;
   column-gap: var(--space-sm);
@@ -416,7 +415,7 @@ a:visited {
     grid-template-rows: repeat(3, 1fr);
     visibility: visible;
   }
-  #needs-container {
+  .needs-container {
     visibility: visible;
   }
   .webpage-image.pinned {

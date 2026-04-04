@@ -40,8 +40,10 @@ h3 {
   font-weight: 400;
 }
 
-p {
-  font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+p,
+span,
+li {
+  font-size: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
   line-height: 1.6;
   max-width: 75ch;
 }
@@ -102,7 +104,7 @@ nav ul {
 #intro-section {
   display: flex;
   flex-direction: row;
-  height: 200px;
+  height: auto;
   flex: 60% 40%;
   padding-bottom: var(--space-sm);
   background-color: white;
@@ -260,4 +262,14 @@ footer a:visited {
   display: flex;
   justify-self: center;
   padding-bottom: var(--space-xs);
+}
+
+@media screen and (max-width: 500px) {
+  .footer-left {
+    display: none;
+  }
+  #footer-information {
+    justify-content: flex-end;
+    padding-inline: var(--space-lg);
+  }
 }
