@@ -59,10 +59,9 @@ nav ul {
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  padding-right: var(--space-md);
-  padding-top: var(--space-xs);
-  padding-bottom: var(--space-xs);
-  align-items: flex-end;
+  padding-inline: var(--space-md);
+  padding-block: var(--space-xs);
+  align-items: center;
 }
 
 .right-side li,
@@ -271,5 +270,11 @@ footer a:visited {
   #footer-information {
     justify-content: flex-end;
     padding-inline: var(--space-lg);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav ul {
+    flex-direction: column;
   }
 }
