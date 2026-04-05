@@ -432,20 +432,17 @@ a:visited {
     padding-inline: var(--space-md);
     padding-block: var(--space-md);
   }
-  #luxurious-script {
-    flex-direction: column;
-    row-gap: var(--space-xs);
-  }
-  #playfair-display {
-    flex-direction: column;
-    row-gap: var(--space-xs);
-  }
-  #lora {
-    flex-direction: column;
-    row-gap: var(--space-xs);
-  }
   #project-outcome {
     visibility: visible;
+  }
+  #luxurious-script span {
+    font-size: 6rem;
+  }
+  #playfair-display span {
+    font-size: 2rem;
+  }
+  #lora span {
+    font-size: 1rem;
   }
 }
 
@@ -476,5 +473,26 @@ a:visited {
   }
   #project-outcome {
     align-items: flex-start;
+  }
+  #sjöstugan-typography {
+    padding-block: var(--space-sm);
+  }
+  #sjöstugan-typography p {
+    margin: 0;
+  }
+  #sjöstugan-color-palette {
+    padding-block: var(--space-xs);
+  }
+  #luxurious-script {
+    flex-direction: column;
+    row-gap: var(--space-xs);
+  }
+  #playfair-display {
+    flex-direction: column;
+    row-gap: var(--space-xs);
+  }
+  #lora {
+    flex-direction: column;
+    row-gap: var(--space-xs);
   }
 }

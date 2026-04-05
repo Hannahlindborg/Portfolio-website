@@ -125,4 +125,7 @@ a {
   #collection-cover {
     padding-top: var(--space-lg);
   }
+  .coverimage-container {
+    height: 50vh;
+  }
 }
