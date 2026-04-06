@@ -39,9 +39,8 @@ function initAll() {
       });
     });
     runPageScript();
+    ScrollTrigger.refresh();
   });
-
-  onPageLoad();
 }
 
 function runPageScript() {
