@@ -44,22 +44,20 @@ function initAll() {
 }
 
 function runPageScript() {
-  if (
-    window.location.pathname === "/" ||
-    window.location.pathname.includes("index.html")
-  ) {
+  const path = window.location.pathname;
+  if (path === "/" || path.includes("index.html") || path.endsWith("/")) {
     initWorkPage();
-  } else if (window.location.pathname.includes("about.html")) {
+  } else if (path.includes("about.html")) {
     initAboutPage();
-  } else if (window.location.pathname.includes("stugan")) {
+  } else if (path.includes("stugan")) {
     initSjöstuganProject();
-  } else if (window.location.pathname.includes("sunshake.html")) {
+  } else if (path.includes("sunshake.html")) {
     initSunshakeProject();
-  } else if (window.location.pathname.includes("albumproject.html")) {
+  } else if (path.includes("albumproject.html")) {
     initAlbumProject();
-  } else if (window.location.pathname.includes("bookingsystem.html")) {
+  } else if (path.includes("bookingsystem.html")) {
     initBookingSystemProject();
-  } else if (window.location.pathname.includes("internship.html")) {
+  } else if (path.includes("internship.html")) {
     initInternshipProjects();
   }
 }
