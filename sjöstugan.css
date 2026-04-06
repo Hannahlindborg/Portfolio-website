@@ -11,6 +11,10 @@ a:visited {
   color: black;
 }
 
+a {
+  color: black;
+}
+
 .role-container {
   display: flex;
   flex-direction: row;

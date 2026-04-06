@@ -11,6 +11,10 @@ a:visited {
   color: black;
 }
 
+a {
+  color: black;
+}
+
 #hero-image-container {
   margin-bottom: var(--space-xs);
 }

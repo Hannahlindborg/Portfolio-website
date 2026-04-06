@@ -12,6 +12,10 @@ a:visited {
   color: white;
 }
 
+a {
+  color: black;
+}
+
 #workbutton:hover {
   cursor: pointer;
 }
@@ -341,6 +345,12 @@ footer a:visited {
   }
   #and {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hero-1 {
+    height: 50vh;
   }
 }
 

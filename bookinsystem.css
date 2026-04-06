@@ -11,6 +11,10 @@ a:visited {
   color: black;
 }
 
+a {
+  color: black;
+}
+
 p {
   max-width: 75ch;
 }

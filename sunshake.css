@@ -11,6 +11,10 @@ a:visited {
   color: black;
 }
 
+a {
+  color: black;
+}
+
 /* Logo section */
 #logo-row {
   display: flex;
