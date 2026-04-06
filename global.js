@@ -1,19 +1,3 @@
-//Swup
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(
-    SplitText,
-    ScrollToPlugin,
-    ScrollTrigger,
-    ScrollSmoother,
-    ScrambleTextPlugin,
-    Flip,
-  );
-});
-
-//gsap.registerPlugin(Flip);
-
-//import Swup from "https://unpkg.com/swup@4?module";
 import { initSjöstuganProject } from "./sjöstugan.js";
 import { initWorkPage } from "./work.js";
 import { initAboutPage } from "./about.js";
@@ -22,49 +6,43 @@ import { initAlbumProject } from "./albumproject.js";
 import { initInternshipProjects } from "./internship.js";
 import { initBookingSystemProject } from "./bookingsystem.js";
 
-/*const swup = new Swup({
-  containers: ["#swup"],
-  plugins: [
-    new window.SwupParallelPlugin(),
-    new window.SwupHeadPlugin(),
-    new window.SwupPreloadPlugin({ preloadVisibleLinks: true }),
-  ],
-});
+gsap.registerPlugin(
+  SplitText,
+  ScrollToPlugin,
+  ScrollTrigger,
+  ScrollSmoother,
+  ScrambleTextPlugin,
+  Flip,
+);
 
-let flipState = null;
+let ctx;
 
-swup.hooks.on("visit:start", () => {
-  const state = Flip.getState("[data-flip-id='project-thumbnail']");
-
-  if (state) {
-    flipState = Flip.getState(state);
-  }
-});
-
-swup.hooks.on("content:replace", () => {
-  const target = document.querySelector("[data-flip-id='project-showcase']");
-
-  if (flipState && target)
-    Flip.from(flipState, {
-      duration: 1,
-      ease: "power1.inOut",
-      absolute: true,
-      onComplete: () => {
-        flipState = null;
-      },
-    });
-});*/
-
-async function onPageLoad() {
+function initAll() {
   if (ctx) ctx.revert();
 
   ctx = gsap.context(async () => {
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 769px)", () => {
+      ScrollSmoother.create({
+        smooth: 1,
+        effects: true,
+        smoothTouch: 0.1,
+      });
+    });
+
+    mm.add("(max-width: 768px)", () => {
+      ScrollSmoother.create({
+        smooth: 1,
+        effects: false,
+        smoothTouch: 0.1,
+      });
+    });
     runPageScript();
   });
-}
 
-let ctx;
-onPageLoad();
+  onPageLoad();
+}
 
 function runPageScript() {
   if (
@@ -87,20 +65,6 @@ function runPageScript() {
   }
 }
 
-let mm = gsap.matchMedia();
-
-mm.add("(min-width: 769px)", () => {
-  ScrollSmoother.create({
-    smooth: 1,
-    effects: true,
-    smoothTouch: 0.1,
-  });
-});
-
-mm.add("(max-width: 768px)", () => {
-  ScrollSmoother.create({
-    smooth: 1,
-    effects: false,
-    smoothTouch: 0.1,
-  });
+window.addEventListener("load", () => {
+  initAll();
 });
