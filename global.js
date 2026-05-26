@@ -5,6 +5,7 @@ import { initSunshakeProject } from "./sunshake.js";
 import { initAlbumProject } from "./albumproject.js";
 import { initInternshipProjects } from "./internship.js";
 import { initBookingSystemProject } from "./bookingsystem.js";
+import { initMomentProject } from "./moment.js";
 
 gsap.registerPlugin(
   SplitText,
@@ -59,6 +60,8 @@ function runPageScript() {
     initBookingSystemProject();
   } else if (path.includes("internship.html")) {
     initInternshipProjects();
+  } else if (path.includes("moment.html")) {
+    initMomentProject();
   }
 }
 

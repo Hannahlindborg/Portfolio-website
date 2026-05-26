@@ -1,0 +1,387 @@
+/* Swup reveal transition */
+#swup.transition-reveal {
+  background-color: white;
+}
+
+#smooth-content {
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+@font-face {
+  font-family: voyage;
+  src: url(images/voyage_aAahB3NViJ.ttf);
+}
+
+#hero-image-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#intro-right-container {
+  row-gap: var(--space-sm);
+}
+
+#delivery-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-xs);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#delivery-container span {
+  font-weight: 800;
+}
+
+#delivery-container p {
+  margin-top: 0;
+}
+
+#hero-description {
+  font-style: italic;
+  margin-top: var(--space-xs);
+  margin-left: var(--space-md);
+  font-weight: 300;
+}
+
+#concept-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: var(--space-lg);
+  margin-inline: var(--space-md);
+  height: 50vh;
+}
+
+#concept-section p {
+  max-width: 75ch;
+}
+
+/* identity section */
+
+#brandidentity-section {
+  margin-block: var(--space-lg);
+  margin-inline: var(--space-md);
+}
+
+#identity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+}
+
+#logo1 {
+  grid-column: 1/3;
+}
+
+.logo-image-container {
+  max-height: 40vh;
+  aspect-ratio: 1/1;
+  justify-self: center;
+}
+
+.logo-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-container {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo-row p {
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+/* Color section */
+#color-section {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--space-xs);
+  background-color: white;
+  overflow: hidden;
+}
+
+.color-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#typography {
+  display: flex;
+  flex-direction: column;
+  justify-content: Center;
+  align-items: center;
+  max-height: 100vh;
+}
+
+#typography-container {
+  padding-inline: var(--space-xl);
+  padding-block: var(--space-md);
+}
+
+#typography-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product section */
+
+.packaging-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.packaging-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*social video section*/
+#social-video-section {
+  margin-inline: var(--space-md);
+  margin-block: var(--space-lg);
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
+  column-gap: var(--space-sm);
+}
+
+.social-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/*Web mockup section*/
+
+#web-mockup-section {
+  margin-block: var(--space-lg);
+  margin-inline: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+#web-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+#web-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#ad-section {
+  background-color: white;
+  overflow: hidden;
+  max-height: 100vh;
+  padding-inline: var(--space-xl);
+  padding-block: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ad-video-container {
+  height: 80vh;
+  width: auto;
+  background-color: white;
+}
+
+#ad-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Instragram stories */
+
+#instagram-story-section {
+  background-color: white;
+}
+
+#instagram-story-flex {
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+}
+
+.instagram-story-container {
+  padding: var(--space-sm);
+}
+
+.instagram-story-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.mockup-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mockup-image-container img,
+.magazine-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#magazine-pages {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+}
+
+#outcome-section {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--space-md);
+  padding-block: var(--space-sm);
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: 50vh;
+}
+
+@media screen and (max-width: 1024px) {
+  #typography-system-section {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: var(--space-md);
+  }
+  #web-mockup-section {
+    margin-inline: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #instagram-story-flex {
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .instagram-story-container {
+    padding-inline: var(--space-md);
+    background-color: white;
+  }
+  #social-video-section {
+    flex-direction: column;
+    background-color: white;
+    max-height: fit-content;
+  }
+
+  .social-video-container {
+    padding-inline: var(--space-md);
+    background-color: white;
+  }
+
+  #ad-section {
+    padding-inline: 0;
+  }
+
+  #web-mockup-section {
+    margin-inline: var(--space-md);
+  }
+  .logo-container {
+    visibility: visible;
+  }
+  #logo-row {
+    flex-direction: column;
+    padding-inline: var(--space-md);
+  }
+  .caption-1 {
+    padding-left: 0;
+  }
+  #concept-section {
+    margin-block: var(--space-md);
+  }
+  .text-div {
+    align-items: flex-start;
+  }
+  #magazine-pages {
+    flex-direction: column;
+    background-color: white;
+  }
+  #identity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #color-img-container {
+    height: 100vh;
+  }
+
+  #color-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #menu-right-container {
+    height: 70vh;
+  }
+  #menu-right-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mockup-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #outcome-section {
+    align-items: flex-start;
+  }
+  .instagram-story-container {
+    padding-inline: var(--space-md);
+  }
+  #concept-section {
+    align-items: flex-start;
+  }
+  #bebas-sample-text {
+    font-size: 3rem;
+  }
+  #bebas-neue-text {
+    font-size: 1.5rem;
+  }
+  #acumin-sample-text {
+    font-size: 2rem;
+  }
+  #acumin-text {
+    font-size: 1rem;
+  }
+}
