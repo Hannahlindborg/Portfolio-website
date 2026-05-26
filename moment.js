@@ -2,7 +2,7 @@ export function initMomentProject() {
   let mm = gsap.matchMedia();
 
   mm.add("(min-width: 769px)", () => {
-    logoSection();
+    identitySection();
     colorpalette();
     tiktokads();
     mobilemockups();
@@ -15,12 +15,12 @@ export function initMomentProject() {
   });
 }
 
-function logoSection() {
-  const sectionContainer = document.querySelector("#logo-system-section");
-  const logoContainer = document.querySelectorAll(".logo-container");
+function identitySection() {
+  const sectionContainer = document.querySelector("#brandidentity-section");
+  const identityContainer = document.querySelector("#identity-grid");
 
   gsap.fromTo(
-    logoContainer,
+    identityContainer,
     {
       y: 100,
       opacity: 0.5,
