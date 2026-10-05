@@ -1,31 +1,30 @@
-/* Swup reveal transition */
-#swup.transition-reveal {
-  background-color: black;
-}
-
 body {
-  background-color: black;
-  color: white;
+  background-image: url("images/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black;
 }
 
 a:visited {
-  color: white;
+  color: black;
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 /* Introduction section */
 
 .introduction {
   display: grid;
-  grid-template-columns: 30% 70%;
-  padding-inline: var(--space-xl);
+  grid-template-columns: 70% 30%;
+  padding-inline: var(--space-md);
   padding-block: var(--space-lg);
 }
 
-.left-column {
+.right-column {
   display: flex;
   flex-direction: column;
 }
@@ -68,12 +67,12 @@ a {
   display: inline-block;
 }
 
-.right-column {
+.left-column {
   display: flex;
   flex-direction: column;
 }
 
-.right-column h1 {
+.left-column h1 {
   margin-top: 0;
   font-size: 3rem;
 }
@@ -128,12 +127,26 @@ a {
   flex-wrap: wrap;
 }
 
-.tool-icons p {
+/*.tool-icons p {
   border: 1px solid white;
   border-radius: 12px;
   padding-inline: 8px;
   padding-block: 4px;
   font-size: 1rem;
+}*/
+
+.tool-icons p {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  margin-block: var(--space-xs);
+  font-size: 0.75rem;
+  font-weight: 300;
+  padding-inline: 10px;
+  padding-block: 2px;
+  letter-spacing: 0.04em;
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
 }
 
 /* Education */
@@ -147,19 +160,6 @@ a {
 
 .school {
   visibility: hidden;
-}
-
-footer {
-  background-color: black;
-  color: white;
-}
-
-footer a {
-  color: white;
-}
-
-footer a:visited {
-  color: white;
 }
 
 @media screen and (max-width: 1024px) {
