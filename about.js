@@ -5,6 +5,7 @@ export function initAboutPage() {
     splitTitle();
     aboutText();
     portraitImage();
+    buttonsAnimation();
     skillSection();
     toolSection();
     educationSection();
@@ -65,6 +66,42 @@ function aboutText() {
       delay: 2,
     },
   );
+}
+
+function buttonsAnimation() {
+  gsap.fromTo(
+    ".buttons-container div",
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2,
+      delay: 2,
+      ease: "power2.out",
+    },
+  );
+
+  let buttons = document.querySelectorAll(".buttons-container div");
+
+  buttons.forEach((button) => {
+    button.addEventListener("mouseenter", () => {
+      gsap.to(button, {
+        scale: 1.05,
+        zIndex: 100,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    });
+    button.addEventListener("mouseleave", () => {
+      gsap.to(button, {
+        scale: 1,
+        zIndex: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    });
+  });
 }
 
 function skillSection() {

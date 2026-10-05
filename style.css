@@ -127,6 +127,60 @@ nav ul {
   text-decoration-line: none;
 }
 
+/* Button design */
+/*
+Button gradient design inspired by https://gradientbuttons.colorion.co/page/3/
+*/
+
+.primarybutton {
+  background-image: linear-gradient(
+    to right,
+    #111111 0%,
+    #444444 51%,
+    #111111 100%
+  );
+  color: white;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.primarybutton:hover {
+  background-position: right center;
+  transform: scale(1.05);
+}
+
+.secondarybutton {
+  border: 1px solid grey;
+  transition: 0.5s;
+}
+
+.secondarybutton a {
+  text-decoration-line: none;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.buttons-container div {
+  padding-inline: var(--space-sm);
+  padding-block: var(--space-xs);
+  border-radius: 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+a {
+  text-decoration-line: none;
+}
+
 /* Intro section */
 
 #intro-section {

@@ -179,7 +179,7 @@ function aboutText() {
 
 function buttonsAnimation() {
   gsap.fromTo(
-    "#buttons-container div",
+    ".buttons-container div",
     { opacity: 0, y: 50 },
     {
       opacity: 1,
@@ -191,7 +191,7 @@ function buttonsAnimation() {
     },
   );
 
-  let buttons = document.querySelectorAll("#buttons-container div");
+  let buttons = document.querySelectorAll(".buttons-container div");
 
   buttons.forEach((button) => {
     button.addEventListener("mouseenter", () => {
