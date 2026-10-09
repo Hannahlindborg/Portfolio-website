@@ -2,38 +2,54 @@ export function initAboutPage() {
   let mm = gsap.matchMedia();
 
   mm.add("(min-width: 769px)", () => {
-    splitTitle();
-    aboutText();
-    portraitImage();
-    buttonsAnimation();
+    document.fonts.ready.then(() => {
+      animationTimeline();
+    });
+
+    /*Interaction based animations*/
+    buttonsHover();
     skillSection();
     toolSection();
     educationSection();
   });
 }
 
+function animationTimeline() {
+  const mainTimeline = gsap.timeline();
+
+  /*Automatic animations*/
+  mainTimeline
+    .add(splitTitle(), "<")
+    .add(aboutText(), "-=1.5")
+    .add(buttonsAnimation(), "<")
+    .add(portraitImage(), "<");
+}
+
 function splitTitle() {
-  document.fonts.ready.then(() => {
-    let split = SplitText.create("#split-text-title", { type: "words,chars" });
-    gsap.from(split.words, {
-      opacity: 0,
-      y: +10,
-      duration: 2,
-      ease: "sine.out",
-      stagger: 0.1,
-      onComplete: () => split.revert(),
-    });
+  let split = SplitText.create("#split-text-title", { type: "words,chars" });
+  let tl = gsap.timeline();
+
+  tl.from(split.words, {
+    opacity: 0,
+    y: +10,
+    duration: 2,
+    ease: "sine.out",
+    stagger: 0.1,
+    onComplete: () => split.revert(),
   });
+
+  return tl;
 }
 
 function portraitImage() {
-  const leftSide = document.querySelector(".left-column");
+  const rightSide = document.querySelector(".right-column");
+  let tl = gsap.timeline();
 
-  gsap.fromTo(
-    leftSide,
+  tl.fromTo(
+    rightSide,
     {
       autoAlpha: 0,
-      x: -50,
+      x: +50,
       opacity: 0,
     },
     {
@@ -42,13 +58,16 @@ function portraitImage() {
       opacity: 1,
       duration: 2,
       ease: "power1.inOut",
-      delay: 0.5,
     },
   );
+
+  return tl;
 }
 
 function aboutText() {
   let text = document.querySelectorAll(".about-text");
+  let tl = gsap.timeline();
+
   gsap.fromTo(
     text,
     {
@@ -63,13 +82,16 @@ function aboutText() {
       duration: 2,
       ease: "sine.out",
       stagger: 0.2,
-      delay: 2,
     },
   );
+
+  return tl;
 }
 
 function buttonsAnimation() {
-  gsap.fromTo(
+  let tl = gsap.timeline();
+
+  tl.fromTo(
     ".buttons-container div",
     { opacity: 0, y: 50 },
     {
@@ -77,11 +99,14 @@ function buttonsAnimation() {
       y: 0,
       duration: 1,
       stagger: 0.2,
-      delay: 2,
       ease: "power2.out",
     },
   );
 
+  return tl;
+}
+
+function buttonsHover() {
   let buttons = document.querySelectorAll(".buttons-container div");
 
   buttons.forEach((button) => {
