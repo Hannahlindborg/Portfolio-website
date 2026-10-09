@@ -3,6 +3,77 @@
   background-color: black;
 }*/
 
+/* Website Preloader */
+
+html.preloader-hidden #preloader {
+  display: none !important;
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader-name {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.35em;
+}
+
+#loader-first-name,
+#loader-last-name {
+  display: flex;
+  align-items: baseline;
+  line-height: 1 !important;
+  font-size: clamp(3rem, 7vw, 6rem) !important;
+  margin: 0;
+}
+
+#loader-name #loader-first-name {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+#loader-name #loader-last-name {
+  font-family: "Playfair Display", serif !important;
+  font-weight: 400 !important;
+}
+
+#loader-name #loader-first-name *,
+#loader-name #loader-last-name * {
+  font-family: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+  font-size: clamp(3rem, 7vw, 6rem) !important;
+}
+
+.char {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+  line-height: 1;
+}
+
+.original {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.clone {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 body {
   background-image: url("images/background-img.jpg");
   background-size: cover;
@@ -46,40 +117,6 @@ a {
 #hero-description {
   margin-top: var(--space-sm);
   flex: 60%;
-  line-height: 1.5;
-  font-kerning: normal;
-}
-
-#hero-description,
-#hero-description *,
-#hero-description div,
-#hero-description span {
-  font-family: "JetBrains Mono", monospace !important;
-  font-size: 1rem;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-}
-
-#hero-description b,
-#hero-description strong,
-#hero-description .split-word b,
-#hero-description .split-word strong {
-  font-weight: 700 !important;
-}
-
-#hero-description .split-line,
-#hero-description .split-word {
-  font-family: "JetBrains Mono", monospace !important;
-  font-weight: 100 !important;
-  font-size: 1rem !important;
-  line-height: inherit !important;
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#hero-description div {
-  display: inline-block;
 }
 
 #hero-gallery {

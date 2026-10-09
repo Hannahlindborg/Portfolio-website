@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+  if (sessionStorage.getItem("hasVisited")) {
+    document.documentElement.classList.add("preloader-hidden");
+  }
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+     <link rel="icon" type="image/png" href="images/Dark grey icon.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
@@ -25,10 +30,38 @@
     <link rel="stylesheet" href="transitions.css" />
   </head>
   <body>
+
+ <div id="preloader">
+  <div class="loader-content">
+    <div id="loader-name">
+          <h1 id="loader-first-name">
+          <span class="char"><div class="original">H</div><div class="clone">H</div></span>
+          <span class="char"><div class="original">a</div><div class="clone">a</div></span>
+          <span class="char"><div class="original">n</div><div class="clone">n</div></span>
+          <span class="char"><div class="original">n</div><div class="clone">n</div></span>
+          <span class="char"><div class="original">a</div><div class="clone">a</div></span>
+          <span class="char"><div class="original">h</div><div class="clone">h</div></span>
+          </h1>
+           <h1 id="loader-last-name">
+          <span class="char"><div class="original">L</div><div class="clone">L</div></span>
+          <span class="char"><div class="original">i</div><div class="clone">i</div></span>
+          <span class="char"><div class="original">n</div><div class="clone">n</div></span>
+          <span class="char"><div class="original">d</div><div class="clone">d</div></span>
+          <span class="char"><div class="original">b</div><div class="clone">b</div></span>
+          <span class="char"><div class="original">o</div><div class="clone">o</div></span>
+          <span class="char"><div class="original">r</div><div class="clone">r</div></span>
+          <span class="char"><div class="original">g</div><div class="clone">g</div></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     <div id="smooth-wrapper" class="smooth-scroll">
       <div id="smooth-content">
         <header>
-          <nav aria-label="main">
+          <nav aria-label="main"> 
             <ul>
               <div class="left-side">
                 <li class="name" id="firstname"><a href="index.html">Hannah</a></li>
@@ -41,7 +74,9 @@
             </ul>
           </nav>
         </header>
+
         <main id="swup" class="transition-reveal">
+
           <section id="hero-section">
             <section id="left">
     <div id="hero-title">
@@ -49,10 +84,10 @@
       <h1 id="line2">&amp; Communications</h1>
     </div>
 
-            <p id="hero-description">
-      Backed by a Bachelor's degree in Graphic Design &amp; Web Development, I combine creative visual storytelling with technical execution. <br><br>
-      I design and build <b>responsive websites</b>, distinct <b>visual identities</b>, and <b>multi-channel content</b> across physical and digital spaces.
-    </p>
+    <div id="hero-description">
+  <p class="about-text">Backed by a Bachelor's degree in Graphic Design &amp; Web Development, I combine creative visual storytelling with technical execution.</p>
+  <p class="about-text">I design and build <b>responsive websites</b>, distinct <b>visual identities</b>, and <b>multi-channel content</b> across physical and digital spaces.</p>
+</div>
 
             <div class="buttons-container">
               <div class="workbutton primarybutton">View my work &rarr;</div>

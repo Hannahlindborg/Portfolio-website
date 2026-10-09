@@ -3,74 +3,147 @@ export function initWorkPage() {
   let mm = gsap.matchMedia();
 
   mm.add("(min-width: 769px)", () => {
+    /*Interaction based animations*/
     scrollToProjects();
-    /*splitTitle();*/
-    scrambleTitle();
-    //imageAnimation();
-    aboutText();
-    imageGallery();
     imageGalleryInteractions();
-    buttonsAnimation();
-    //heroGalleryAnimation();
-    introduceProjects();
     hoverProject();
-  });
-}
+    buttonsHover();
+    introduceProjects();
 
-function scrollToProjects() {
-  document.querySelectorAll(".workbutton").forEach((button) => {
-    button.addEventListener("click", () => {
-      let projectShowcase = document.querySelector("#projects-section");
-      if (projectShowcase) {
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: { y: projectShowcase, autoKill: true },
-          ease: "power2.out",
-        });
-      }
+    document.fonts.ready.then(() => {
+      animationTimeline();
     });
   });
 }
 
-/*function splitTitle() {
-  document.fonts.ready.then(() => {
-    let split = SplitText.create("#line1", { type: "words,chars" });
-    gsap.from(split.words, {
-      opacity: 0,
-      y: +10,
-      duration: 2,
-      ease: "sine.out",
-      stagger: 0.1,
-      onComplete: () => split.revert(),
+function animationTimeline() {
+  const mainTimeline = gsap.timeline();
+  const preloader = document.querySelector("#preloader");
+  const hasVisited = sessionStorage.getItem("hasVisited");
+
+  if (!hasVisited) {
+    mainTimeline.add(preloadAnimation());
+    sessionStorage.setItem("hasVisited", "true");
+  }
+
+  /*Automatic animations*/
+  mainTimeline
+    .add(scrambleTitle(), "-=0.2")
+    .add(aboutText(), "<")
+    .add(buttonsAnimation(), "-=1.5")
+    .add(imageGallery(), "-=1.2");
+}
+
+/* Animation from https://www.youtube.com/watch?v=hwk1oxTt2So */
+function preloadAnimation() {
+  const repeat = 8;
+  const tl = gsap.timeline();
+  const char = document.querySelectorAll(".char");
+  const rollTl = gsap.timeline();
+
+  char.forEach((char, i) => {
+    const original = char.querySelector(".original");
+    const clone = char.querySelector(".clone");
+
+    gsap.set(clone, {
+      yPercent: i % 2 === 0 ? -100 : 100,
     });
+
+    let roll = gsap.to([original, clone], {
+      repeat: repeat,
+      ease: "none",
+      yPercent: i % 2 === 0 ? "+=100" : "-=100",
+      duration: 1,
+    });
+
+    rollTl.add(roll, 0);
   });
-}*/
+
+  const mainTimeline = gsap.timeline();
+
+  mainTimeline
+    .to(rollTl, {
+      progress: 1,
+      duration: 4,
+      ease: "power4.inOut",
+    })
+    .to(
+      "#loader-name",
+      {
+        opacity: 0,
+        y: -20,
+        duration: 0.4,
+        ease: "power2.in",
+      },
+      "+=0.2",
+    )
+    .to(
+      "#preloader",
+      {
+        yPercent: -100,
+        duration: 0.8,
+        ease: "power4.inOut",
+        onComplete: () => {
+          gsap.set("#preloader", {
+            display: "none",
+          });
+        },
+      },
+      "-=0.1",
+    );
+  return mainTimeline;
+}
 
 function scrambleTitle() {
-  const timeline = gsap.timeline({ ease: "power2.out" });
+  const tl = gsap.timeline({ ease: "power2.out" });
 
   gsap.set("#line2", { opacity: 0 });
 
-  timeline.to("#line2", {
+  tl.to("#line2", {
     opacity: 1,
     duration: 2,
-    delay: 2,
     scrambleText: {
       text: "& Communications",
       chars: "& Communications",
     },
   });
+  return tl;
+}
+
+function aboutText() {
+  let text = document.querySelectorAll(".about-text");
+  const tl = gsap.timeline();
+
+  tl.fromTo(
+    text,
+    {
+      autoAlpha: 0,
+      y: 50,
+      opacity: 0,
+    },
+    {
+      autoAlpha: 1,
+      y: 0,
+      opacity: 1,
+      duration: 2,
+      ease: "sine.out",
+      stagger: 0.2,
+    },
+  );
+
+  return tl;
 }
 
 function imageGallery() {
-  gsap.from(".gallery-img-container", {
+  const tl = gsap.timeline();
+
+  tl.from(".gallery-img-container", {
     opacity: 0,
     y: 60,
     scale: 0.8,
     rotation: () => gsap.utils.random(-10, 10),
     stagger: { amount: 0.8, from: "random" },
     ease: "back.out(1.4)",
-    delay: 5,
   });
 
   gsap.to(".gallery-img-container", {
@@ -87,6 +160,40 @@ function imageGallery() {
       end: "bottom top",
       toggleActions: "play reverse play reverse",
     },
+  });
+
+  return tl;
+}
+
+function buttonsAnimation() {
+  const tl = gsap.timeline();
+
+  tl.fromTo(
+    ".buttons-container div",
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+    },
+  );
+  return tl;
+}
+
+function scrollToProjects() {
+  document.querySelectorAll(".workbutton").forEach((button) => {
+    button.addEventListener("click", () => {
+      let projectShowcase = document.querySelector("#projects-section");
+      if (projectShowcase) {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: projectShowcase, autoKill: true },
+          ease: "power2.out",
+        });
+      }
+    });
   });
 }
 
@@ -133,64 +240,7 @@ function imageGalleryInteractions() {
   });
 }
 
-/*function imageAnimation() {
-  let mm = gsap.matchMedia();
-  const state = Flip.getState(".gallery-images");
-
-  mm.add("(min-width: 769px)", () => {
-    Flip.from(state, {
-      targets: ".project-image",
-      duration: 1,
-      absolute: true,
-      props: "object-fit, object-position",
-      ease: "power2.inOut",
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: "#projects-showcase",
-        start: "top bottom",
-        end: "top 20%",
-        scrub: 1,
-        toggleClass: { targets: "body", className: "is-flipping" },
-      },
-    });
-  });
-}*/
-
-function aboutText() {
-  document.fonts.ready.then(() => {
-    let split = SplitText.create("#hero-description", {
-      type: "lines",
-      linesClass: "split-line",
-    });
-    gsap.from(split.lines, {
-      opacity: 0,
-      y: +50,
-      duration: 1,
-      ease: "sine.out",
-      stagger: 0.2,
-      delay: 2,
-      onComplete: () => {
-        split.revert();
-        gsap.set("#hero-description", { clearProps: "all" });
-      },
-    });
-  });
-}
-
-function buttonsAnimation() {
-  gsap.fromTo(
-    ".buttons-container div",
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      stagger: 0.2,
-      delay: 2,
-      ease: "power2.out",
-    },
-  );
-
+function buttonsHover() {
   let buttons = document.querySelectorAll(".buttons-container div");
 
   buttons.forEach((button) => {
@@ -212,35 +262,6 @@ function buttonsAnimation() {
     });
   });
 }
-
-/*function heroGalleryAnimation() {
-  const galleryImages = gsap.utils.toArray(".gallery-images");
-  let galleryTimeline = gsap.timeline({ repeat: -1 });
-
-  galleryImages.forEach((image, i) => {
- galleryTimeline.to(image, { opacity: 0, duration: 1, delay: 2 }, "-=0.5");
-    }
-    .set(image, { zIndex: -1, opacity: 1 });
-};*/
-
-/*function projectsPinned() {
-  const pinnedCards = gsap.utils.toArray(".webpage-image");
-
-  gsap.set(pinnedCards[0], { autoAlpha: 1 });
-
-  pinnedCards.forEach((card, i) => {
-    ScrollTrigger.create({
-      trigger: card,
-      start: "top top",
-      endTrigger: "#webpage-mockups",
-      pin: true,
-      pinSpacing: false,
-      onEnter: () => gsap.to(card, { autoAlpha: 1, duration: 0.35 }),
-      onLeaveBack: () => i && gsap.to(card, { autoAlpha: 1 }),
-      id: i + 1,
-    });
-  });
-}*/
 
 function introduceProjects() {
   gsap.set(".project-container", { opacity: 0, y: 50 });
